@@ -22,6 +22,7 @@ class NewService {
           image: article['urlToImage'] ?? "",
           title: article['title'] ?? "",
           subTitle: article['description'] ?? "",
+          url: article['url'] ?? "",
         );
         articlesList.add(articleModel);
       }

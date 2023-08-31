@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_appp/views/web_view_screen.dart';
 
 import '../models/article_model.dart';
 import 'news_tile.dart';
@@ -15,8 +16,15 @@ class NewsListView extends StatelessWidget {
             (context, index) {
           return Padding(
             padding: const EdgeInsets.only(bottom: 22),
-            child: NewsTile(
-              articleModel: articles[index],
+            child: InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => WebViewScreen(url: articles[index].url),
+                ));
+              },
+              child: NewsTile(
+                articleModel: articles[index],
+              ),
             ),
           );
         },

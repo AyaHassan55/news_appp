@@ -2,6 +2,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_appp/models/article_model.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
 
 class NewsTile extends StatelessWidget {
   const NewsTile({Key? key, required this.articleModel}) : super(key: key);
@@ -28,6 +30,7 @@ class NewsTile extends StatelessWidget {
         const SizedBox(
           height: 12,
         ),
+
         Text(
           articleModel.title,
           maxLines: 2,

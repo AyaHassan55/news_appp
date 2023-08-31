@@ -37,6 +37,7 @@ class HomeScreen extends StatelessWidget {
               ),
 
             ),
+
             NewsListViewBuilder(
               category:"general",
             ),
